@@ -30,7 +30,7 @@ def calculate_initial_velocity(distance, dh, angle):
 
 def calculate_pressure(velocity, slope, intercept):
     # calculate pressure using the linear equation y = mx + b
-    return slope * velocity + intercept
+    return (velocity - intercept) / slope
 
 if __name__ == "__main__":
    print(calculate_initial_velocity(25.3, -10, math.radians(60)))

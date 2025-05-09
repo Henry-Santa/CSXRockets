@@ -3,8 +3,8 @@ import util
 import math
 
 # CONSTANTS
-SLOPES = [1.22]
-INTERCEPTS = [18.6]
+SLOPES = [.178]
+INTERCEPTS = [9.49]
 ANGLES = [15, 30, 45, 60, 75]
 
 # FUNCTIONS
