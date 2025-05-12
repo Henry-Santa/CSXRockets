@@ -14,11 +14,17 @@ def determine_pairs(dh, distance):
         pairs.append((angle, util.calculate_initial_velocity(distance, dh, math.radians(angle))))
     return pairs
 
+def handle_input(value):
+    if value[-1].lower() == 'y':
+        return float(value[:-1]) * 0.9144  # Convert yards to meters
+    else:
+        return float(value)  # Already in meters
+
 # MAIN 
 def main():
     # Get the distance and height difference from the user
-    distance = float(input("Enter the distance (in meters): "))
-    dh = float(input("Enter the height difference (in meters): "))
+    distance = handle_input(input("Enter the distance (in meters or \"y\" after for yards): "))
+    dh = handle_input(input("Enter the height difference (in meters or \"y\" after for yards): "))
 
     # Calculate the pairs of angles and initial velocities
     pairs = determine_pairs(dh, distance)
